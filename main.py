@@ -64,13 +64,12 @@ def parse_file(all_users: list):
             uncompleted.clear()
             break
 
-        if len(all_users[idx]) == 4:
-            cur_user_id = all_users[idx]['userId']
+        cur_user_id = all_users[idx]['userId']
         if all_users[idx]['completed']:
             completed.append(all_users[idx]['title'])
         else:
             uncompleted.append(all_users[idx]['title'])
 
 
-file = open_file('todos.json')
+file = open_file('venv/todos.json')
 parse_file(file)
